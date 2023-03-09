@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/8f2e0ac201.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Instagran Feed con Bootstarp</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div nav-bar>
+                <nav class="navbar navbar-expand-lg bg-light d-flex align-items-center">
+                    <div class="container-fluid">
+                        <a class="navbar-brand px-5" href="#">
+                            <i class="fab fa-instagram "></i>
+                            <span>Instagran</span>
+                        </a>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                            <!-- Boton de Modal-->
+                            <button type="button" class="btn btn-success m-2" data-bs-toggle="modal"
+                                data-bs-target="#Modal">
+                                Create a New Post
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a New Post</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <h5>Caption:</h5>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                                    placeholder="Add the caption if your post here"></textarea>
+                                            </div>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button"
+                                                    class="btn btn-outline-secondary text-dark m-1 border border-ligh"><i
+                                                        class="fas fa-camera"></i></button>
+                                                <button type="button"
+                                                    class="btn btn-outline-secondary text-dark m-1 border border-ligh"><i
+                                                        class="fas fa-map-marker-alt"></i></button>
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Publish</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!---- Dropdown-->
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-cog"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                    <li><a class="dropdown-item  text-danger border-top border-black-50 href=" #">Log
+                                            out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-pills mb-3 justify-content-center m-1" id="pills-tab" role="tablist">
+                <li class="nav-item " role="presentation">
+                    <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                            class="fa-solid fa-th"></i></button>
+                </li>
+                <li class="nav-item " role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content d-flex justify-content-center" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                <div class="container-fluid">
+                    <div class="row">
+
+                    <img src="https://cdn.pixabay.com/photo/2017/02/05/00/19/web-design-2038872_1280.jpg"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2019/10/03/12/12/javascript-4523100_1280.jpg"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DXEULsa---/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ye9madojmh8bs7pnhaen.png"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://images.unsplash.com/photo-1633412802994-5c058f151b66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://www.devacademy.es/wp-content/uploads/2018/10/python-logo.png"
+                        class="img-thumbnail col-4 border border-0 my-2" alt="...">
+
+                    <img src="https://jwt.io/img/logo-asset.svg" class="img-thumbnail col-4 border border-0 my-2" alt="...">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5fab0f557dc65768bf97748a/1614800201272-S6TXOHB3WZ1HKPA1UB92/What-is-an-API.png?format=1000w" class="img-thumbnail col-4 border border-0 my-2 alt="">
+                </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h4>HTML5</h4>
+                            <h6 class="justify-content-end">08/25</h6>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2017/02/05/00/19/web-design-2038872_1280.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>300 likes</h6>
+                            <p class="card-text ">El documento que lee el navegador está escrito en un lenguaje de marcado llamado HTML, que son las siglas de HyperText Markup Language (Lenguaje de marcas de hipertexto), o lo que es lo mismo, un lenguaje de etiquetas que permite incluir o hacer referencia a todo tipo de información.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>CSS3</h5>
+                            <h6 class="justify-content-end">08/20</h6>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>310 likes</h6>
+                            <p class="card-text">¿Qué significa CSS3? El CSS podría definirse como un tipo de lenguaje que permite definir y crear la presentación de un documento ya estructurado y escrito en un lenguaje de marcado como puede ser HTML. Es decir, permite generar el diseño visual de páginas web e interfaces de usuario.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>JavaScript</h5>
+                            <h6 class="justify-content-end">08/17</h6>
+                        </div>
+                        <img src="https://cdn.pixabay.com/photo/2019/10/03/12/12/javascript-4523100_1280.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>360 likes</h6>
+                            <p class="card-text">JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en acerca de JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>Bootstrap</h5>
+                            <h6 class="justify-content-end">08/15</h6>
+                        </div>
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DXEULsa---/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ye9madojmh8bs7pnhaen.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>420 likes</h6>
+                            <p class="card-text">Bootstrap 5 es una de las versiones recientemente lanzadas del Framework Bootstrap para el desarrollo web. Esta es una de las librerías más conocidas, pues se pueden construir aplicaciones web adaptables para móvil con el CDN de open source jsDelivr y una página con una plantilla de inicio.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>React</h5>
+                            <h6 class="justify-content-end">08/12</h6>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>450 likes</h6>
+                            <p class="card-text">React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>SQL</h5>
+                            <h6 class="justify-content-end">08/10</h6>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1633412802994-5c058f151b66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>370 likes</h6>
+                            <p class="card-text">¿Qué es SQL? SQL es un lenguaje de computación para trabajar con conjuntos de datos y las relaciones entre ellos. Los programas de bases de datos relacionales, como Microsoft Office Access, usan SQL para trabajar con datos.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>Python</h5>
+                            <h6 class="justify-content-end">08/06</h6>
+                        </div>
+                        <img src="https://www.devacademy.es/wp-content/uploads/2018/10/python-logo.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>700 likes</h6>
+                            <p class="card-text">Python es un lenguaje de alto nivel de programación interpretado cuya filosofía hace hincapié en la legibilidad de su código, se utiliza para desarrollar aplicaciones de todo tipo, ejemplos: Instagram, Netflix, Spotify, Panda3D, entre otros.​</p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>JSON Web Token</h5>
+                            <h6 class="justify-content-end">08/02</h6>
+                        </div>
+                        <img src="https://jwt.io/img/logo-asset.svg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>225 likes</h6>
+                            <p class="card-text">JSON Web Token es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios o claims en inglés./p>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="width: 35rem;">
+                        <div class="card-head d-flex justify-content-between m-3">
+                            <h5>API</h5>
+                            <h6 class="justify-content-end">08/01</h6>
+                        </div>
+                        <img src="https://images.squarespace-cdn.com/content/v1/5fab0f557dc65768bf97748a/1614800201272-S6TXOHB3WZ1HKPA1UB92/What-is-an-API.png?format=1000w"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6>410 likes</h6>
+                            <p class="card-text">API significa “interfaz de programación de aplicaciones”. En el contexto de las API, la palabra aplicación se refiere a cualquier software con una función distinta. La interfaz puede considerarse como un contrato de servicio entre dos aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
